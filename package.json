@@ -5,13 +5,13 @@
   "repository": "https://github.com/tony2tones/react-starter.git",
   "author": "tony2tones <anthony.marque@gmail.com>",
   "license": "MIT",
-  "scripts": {
-    "start": "npm run webpack"
-  },
   "dependencies": {
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
+  },
+  "scripts": {
+    "start": "webpack"
   },
   "devDependencies": {
     "babel": "^6.23.0",

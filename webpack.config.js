@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     devtool: 'cheap-module-eval-source-map',
@@ -12,7 +13,7 @@ module.exports = {
         publicPath: '/static/'
     },
     plugins: [
-        new webpack.NoEmitOnErrorsPlugin()
+        new HtmlWebpackPlugin(['app'])
     ],
     module: {
         loaders: [{
