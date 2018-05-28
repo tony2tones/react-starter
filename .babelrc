@@ -1,3 +1,6 @@
 {
-    "presents":["env","react"]
+    "presets": [
+        "env",
+        "react"
+    ]
 }
