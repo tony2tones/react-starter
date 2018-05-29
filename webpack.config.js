@@ -8,12 +8,18 @@ module.exports = {
     app: './src/index',
   },
   target: 'web',
+  devServer: {
+    publicPath: '/',
+    port: 9000
+  },
   output: {
-    path: path.resolve(__dirname, 'src'),
+    path: path.join(__dirname, '/dist'),
     filename: 'bundle.js'
   },
   plugins: [
-    new HtmlWebpackPlugin(['app'])
+    new HtmlWebpackPlugin(({
+      template: path.join(__dirname, 'src/index.html')
+    }))
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
