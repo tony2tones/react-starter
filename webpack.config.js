@@ -1,33 +1,29 @@
-var path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-    devtool: 'cheap-module-eval-source-map',
-    entry: './src/index',
-    output: {
-        path: path.join(__dirname, 'dist'),
-        filename: 'bundle.js'
-    },
-    devServer: {
-        inline: true,
-        port: 8008
-    },
-    module: {
-        rules: [
-            {
-                test: /\.js$/ + /\.jsx$/,
-                exclude: '/node_modules/',
-                use: {
-                    loader: 'babel-loader',
-                }
-            }
-        ]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-            filename: "./index.html"
-        })
+  entry: [
+    path.resolve(__dirname, 'src/index.js'),
+  ],
+  target: 'web',
+  output: {
+    path: path.resolve(__dirname, 'src'),
+    filename: 'bundle.js'
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    modules: [
+      'node_modules',
+      path.resolve(__dirname, 'src'),
     ]
-}
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: ['babel-loader'],
+      }
+    ]
+  }
+};
+
