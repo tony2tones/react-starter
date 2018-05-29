@@ -1,14 +1,20 @@
 const path = require('path');
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: [
-    path.resolve(__dirname, 'src/index.js'),
-  ],
+  devtool: 'cheap-module-eval-source-map',
+  entry: {
+    app: './src/index',
+  },
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'src'),
     filename: 'bundle.js'
   },
+  plugins: [
+    new HtmlWebpackPlugin(['app'])
+  ],
   resolve: {
     extensions: ['.js', '.jsx'],
     modules: [
