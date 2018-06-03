@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import React, { Component } from 'react';
+import request from 'superagent';
+
 import Text from './Toasty';
 
 export default class App extends Component {
