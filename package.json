@@ -11,9 +11,12 @@
     "start": "npm run build && npm run serve"
   },
   "dependencies": {
+    "jest-cli": "^22.4.2",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "react-navigation": "^1.2.1",
+    "superagent": "^3.8.2"
   },
   "devDependencies": {
     "babel-loader": "^7.1.4",
