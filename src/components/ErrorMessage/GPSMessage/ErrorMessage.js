@@ -1,12 +1,9 @@
 import React from 'react';
-import './errorMessage.css';
 
-import GPSMessage from './GPSMessage/GPSMessage';
-
-const Message = () => (
-  <div className="ErrorMessage">
-    <GPSMessage />
+const GPSMessage = () => (
+  <div>
+    Please enable your GPS location to provide you with the latest weather updates
   </div>
 );
 
-export default Message;
+export default GPSMessage;

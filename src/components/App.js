@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import request from 'superagent';
+import './App.css';
 
-import Text from './Toasty';
+import ErrorMessage from './ErrorMessage';
+import BrokenErrorMessage from './BrokenErrorMessages';
 
 // Constant variables
 const apiKEY = '53f9d8e4213222cf517d86dc406d67fc';
@@ -130,20 +132,20 @@ class App extends Component {
             <div>
                 <div className="icon" />
                 {isLoading && <div className="loader" />}
-                {broken && <BrokenErrorMessage />}
-                {showError && <ErrorMessage />}
-                {showWeather && <Weather
+                {/* {broken && <BrokenErrorMessage />}
+                {showError && <ErrorMessage />} */}
+                {/* {showWeather && <Weather
                     cTemp={cTemp.toString()}
                     location={location}
                     weatherNiceName={weatherNiceName}
                     cTempMax={cTempMax.toString()}
                     cTempMin={cTempMin.toString()}
                     icon={icon}
-                />}
-                {showWeather &&
+                />} */}
+                {/* {showWeather &&
                     <button className="button" onClick={() => window.location.reload()}>
                         Refresh
-                </button>}
+                </button>} */}
             </div>
         );
     }

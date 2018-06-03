@@ -1,7 +1,7 @@
 import React from 'react';
 // import './errorMessage.css';
 
-import GPSMessage from './GPSMessage/GPSMessage';
+import GPSMessage from './GPSMessage/ErrorMessage';
 
 const Message = () => (
   <div className="ErrorMessage">
