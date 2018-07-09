@@ -131,6 +131,7 @@ class App extends Component {
         return (
             <div>
                 <div className="icon" />
+                <BrokenErrorMessage />
                 {isLoading && <div className="loader" />}
                 {/* {broken && <BrokenErrorMessage />}
                 {showError && <ErrorMessage />} */}
